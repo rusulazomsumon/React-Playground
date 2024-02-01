@@ -21,8 +21,18 @@ function About() {
   );
 }
 
+function Blog() {
+  // Content for Blog component
+  return (
+    <div>
+      <h2>Blog Page</h2>
+      {/* ... */}
+    </div>
+  );
+}
+
 function Contact() {
-  // Content for Contact component
+  // Content for About component
   return (
     <div>
       <h2>Contact Page</h2>
@@ -37,16 +47,19 @@ function App() {
   return (
     <BrowserRouter>
       <div className="card">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="/contact">Contact</Link>
+
+        {/* Routing */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <h1>Bismillahir Rahmanir Rahim</h1>
-        <p>Allahu Akbar!</p>
-        <button onClick={() => setCount(count + 1)}>Zikir Counter: {count}</button>
+        
       </div>
     </BrowserRouter>
   );
