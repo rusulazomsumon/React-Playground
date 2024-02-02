@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import ContactViewPage from './pages/ContactViewPage';
+import HomeViewPage from './pages/HomeViewPage';
 
-function Home() {
-  // Content for Home component
-  return (
-    <div>
-      <h2>Home Page</h2>
-      {/* ... */}
-    </div>
-  );
-}
 
 function About() {
   // Content for About component
@@ -31,15 +24,9 @@ function Blog() {
   );
 }
 
-function Contact() {
-  // Content for About component
-  return (
-    <div>
-      <h2>Contact Page</h2>
-      {/* ... */}
-    </div>
-  );
-}
+
+
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -50,14 +37,14 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact/view">Contact</Link>
 
         {/* Routing */}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomeViewPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/view" element={<ContactViewPage />} />
         </Routes>
         
       </div>
