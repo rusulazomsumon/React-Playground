@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ContactViewPage() {
+function HomeViewPage() {
   // Replace placeholders with actual contact information
   const name = 'Samsung Mobile';
   const description = 'New Samsung Mobile';
@@ -12,7 +12,7 @@ function ContactViewPage() {
       <p><strong>Product Title:</strong> {name}</p>
       <p><strong>Description:</strong> {description}</p>
       <p><strong>Price:</strong> {price}</p>
-      <p><strong>Buy Now</strong></p>
+      <p><strong><a href="">Buy Now</a></strong></p>
       {/* You can add other relevant contact information here */}
     </div>
   );
